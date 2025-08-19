@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/popup.js" defer></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="container p-3">
+    <div class="text-center mb-3">
+        <img src="icons/icon128.png" alt="Icon" width="40" height="40" class="me-2">
+    </div>
+    <div class="text-center mb-3">
+        <h2 class="d-inline">Secure Password Generator</h2>
+    </div>
+    <!-- <div class="text-end">
+        <button id="open-settings" class="btn btn-sm btn-outline-secondary">⚙️</button>
+    </div> -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" id="tab-generate" data-bs-toggle="tab" href="#generate-tab">Generate</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="tab-history" data-bs-toggle="tab" href="#history-tab">History</a>
+        </li>
+    </ul>
+    <div class="tab-content mt-3">
+        <div class="tab-pane fade show active" id="generate-tab">
+            <div class="mb-3 d-flex align-items-center">
+                <label class="form-label me-2">Password Length:</label>
+                <input type="number" id="length" class="form-control w-75" min="4" max="32" value="12">
+            </div>
+            <div class="form-check text-start">
+                <input type="checkbox" id="uppercase" class="form-check-input">
+                <label class="form-check-label">Include Uppercase</label>
+            </div>
+            <div class="form-check text-start">
+                <input type="checkbox" id="lowercase" class="form-check-input" checked>
+                <label class="form-check-label">Include Lowercase</label>
+            </div>
+            <div class="form-check text-start">
+                <input type="checkbox" id="numbers" class="form-check-input" checked>
+                <label class="form-check-label">Include Numbers</label>
+            </div>
+            <div class="form-check text-start">
+                <input type="checkbox" id="special" class="form-check-input">
+                <label class="form-check-label">Include Special Characters</label>
+            </div>
+            <button id="generate" class="btn btn-primary w-100 mt-3">Generate</button>
+            <div class="input-group mt-3">
+                <textarea id="password" class="form-control" rows="1" readonly></textarea>
+                <button id="copy" class="btn btn-secondary">Copy</button>
+            </div>
+            <p id="copy-message">Password copied successfully!</p>
+            <p class="mt-2">Password Strength: <span id="strength"></span></p>
+        </div>
+        <div class="tab-pane fade" id="history-tab">
+            <h5>Generated Passwords:</h5>
+            <ul id="history" class="list-group text-start" ></ul>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+     <!-- Settings Modal
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="toggleDarkModeSetting">
+                        <label class="form-check-label" for="toggleDarkModeSetting">Enable Dark Mode</label>
+                    </div>
+                    <hr>
+                    <button class="btn btn-outline-primary w-100" id="feedbackButton">Send Feedback</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>

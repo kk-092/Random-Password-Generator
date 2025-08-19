@@ -1,0 +1,58 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    min-width: 300px;
+    font-size: small;
+    height: 550px;
+}
+#history {
+    max-height: 300px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.form-check {
+    text-align: left;
+}
+
+#copy {
+    display: none;
+}
+
+#copy-message {
+    display: none;
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#history li {
+    text-align: left;
+}
+#no-history-message {
+    display: none;
+    text-align: center;
+    color: gray;
+}
+
+#strength {
+    font-weight: bold;
+}
+.weak {
+    color: red;
+}
+.medium {
+    color: orange;
+}
+.strong {
+    color: green;
+}
+
+ .dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+        }
+        .modal-content {
+            background-color: var(--bg-color, #ffffff);
+            color: var(--text-color, #000000);
+        }
